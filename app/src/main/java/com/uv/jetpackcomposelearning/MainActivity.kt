@@ -1,18 +1,12 @@
 package com.uv.jetpackcomposelearning
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.uv.jetpackcomposelearning.ui.Greet
+import com.uv.jetpackcomposelearning.ui.ProfileCard
 import com.uv.jetpackcomposelearning.ui.theme.JetPackComposeLearningTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,6 +18,7 @@ class MainActivity : ComponentActivity() {
                 Column {
                     Greet("Vanshika")
                     Greet("Ujjaval")
+                    ProfileCard("Saini", 22, Color.YELLOW.toString())
                 }
 
             }
