@@ -1,4 +1,4 @@
-package com.uv.jetpackcomposelearning.ui.kotlinLearning.functions
+package com.uv.jetpackcomposelearning.ui.kotlinLearning.Functions
 
 fun main(){
     print("Enter the day num: ")
