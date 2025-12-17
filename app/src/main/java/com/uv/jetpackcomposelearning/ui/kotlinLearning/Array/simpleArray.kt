@@ -1,7 +1,9 @@
 package com.uv.jetpackcomposelearning.ui.kotlinLearning.Array
 
 fun main(){
-    val arr = arrayOf(1,2,3,4,5)
+//    val arr = arrayOf(1,2,3,4,5)
+    val arr = arrayOf(1, "Bhai", true)
+
 
 //    arr.sortDescending()
 
@@ -19,17 +21,18 @@ fun main(){
         print("${arr[i]} ")
 
     }
-    println()
-    // third method
-    print("Using indices: ")
-    for(e in arr.indices){
-        print("$e ")
-    }
+
     println()
     // fourth method
     print("Using foreach: ")
     arr.forEach {
         print("$it ")
+    }
+    println()
+    // third method
+    print("printing valid indices: ")
+    for(e in arr.indices){
+        print("$e ")
     }
 
 
