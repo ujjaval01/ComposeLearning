@@ -1,6 +1,6 @@
 package com.uv.jetpackcomposelearning.ui.kotlinLearning.BasicOops
 
-class classWithConstructor {
+class classWithSecondaryConstructor {
     var name: String = "ujvl"
     var age: Int = 23
 
@@ -25,7 +25,7 @@ class classWithConstructor {
 }
 
 fun main(){
-    val a = classWithConstructor()
-    val c = classWithConstructor("ujjaval",21)
+    val a = classWithSecondaryConstructor()
+    val c = classWithSecondaryConstructor("ujjaval",21)
     c.display()
 }
