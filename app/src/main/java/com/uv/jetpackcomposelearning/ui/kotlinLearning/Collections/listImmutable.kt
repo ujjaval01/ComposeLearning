@@ -27,6 +27,9 @@ fun main() {
     println(list.takeLast(2))
     println(list.filter { it % 2 == 0 })
     println(list.filterNot { it % 2 == 0 })
+    list.forEach {
+
+    }
 
 
 
