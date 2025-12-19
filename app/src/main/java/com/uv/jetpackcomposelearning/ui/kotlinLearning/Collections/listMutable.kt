@@ -50,5 +50,4 @@ fun main(){
         })
     println(list.distinct()) // remove duplicates from the list
 
-
 }
