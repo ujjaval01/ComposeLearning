@@ -2,11 +2,16 @@ package com.uv.jetpackcomposelearning.ui.kotlinLearning.Collections
 
 fun main(){
     // we can change on it...
-    val list = mutableListOf(1,2,3,4,5)
+    val list = mutableListOf(1,2,3,2,3,4,5)
     list.add(6)
     list.add(7)
     list.add(8)
     println(list)
+    print("Using forEach Loop: ")
+    list.forEach {
+        print("$it ")
+    }
+    println()
 
     list.set(2, 10) // also we can use list[2] = 100 instead of set
     println(list)
@@ -43,5 +48,7 @@ fun main(){
         list.all{
             it > 50   // return boolean if all element present
         })
+    println(list.distinct()) // remove duplicates from the list
+
 
 }
