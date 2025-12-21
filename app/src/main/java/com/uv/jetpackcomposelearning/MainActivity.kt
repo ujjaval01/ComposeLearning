@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.uv.jetpackcomposelearning.ui.ComposeLearning.ColumnExample
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.CounterScreen
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.Greet
 import com.uv.jetpackcomposelearning.ui.theme.JetPackComposeLearningTheme
@@ -21,7 +22,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetPackComposeLearningTheme {
                 Column {
-                    CounterScreen()
+//                    CounterScreen()
+                    ColumnExample()
                 }
 
             }
