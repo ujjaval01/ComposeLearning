@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.uv.jetpackcomposelearning.ui.ComposeLearning.CounterScreen
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.Greet
 import com.uv.jetpackcomposelearning.ui.theme.JetPackComposeLearningTheme
 
@@ -20,18 +21,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetPackComposeLearningTheme {
                 Column {
-//                    Row {
-//                        Greet("Vanshika")
-//                        Spacer(modifier = Modifier.width(16.dp))
-//                        Greet("Ujjaval")
-//                    }
-//
-//
-                //                    ProfileCard("Saini", 22, Color.YELLOW.toString())
-
-                    Greet("Vanshika")
-
-
+                    CounterScreen()
                 }
 
             }
