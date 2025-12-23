@@ -11,12 +11,10 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun RowAndCol(){
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Text("Left")
-        Text("Right")
+    Row {
+        Text("Ujjaval")
+        Text("Vanshika")
+
     }
 
 
