@@ -43,7 +43,7 @@ fun RowAndCol(){
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Text(
+        Text(  // all methods of we can use in text...
             text = "Rounded",
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
