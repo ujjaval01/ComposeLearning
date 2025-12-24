@@ -20,34 +20,22 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun LazyColumnExample(modifier: Modifier = Modifier) {
-//    LazyColumn(
-//        modifier = Modifier.fillMaxSize(),
-//        horizontalAlignment = Alignment.CenterHorizontally
-//    ){
-//        items(count = 100){index->
-//            Text(text = "Item $index",
-//                modifier = Modifier.padding(10.dp))
-//        }
-//    }
-//    LazyRow(
-//        verticalAlignment = Alignment.CenterVertically
-//    ) {
-//        items(10) { index ->
-//            Text(
-//                text = "Item $index",
-//                modifier = Modifier.padding(16.dp)
-//            )
-//        }
-//    }
+   LazyRow {
+      items(count = 100){ index->  // index-> explicit, it-> implicit
+         Text("Index ${index+1}", modifier = Modifier.padding(18.dp))
+      }
+   }
+   LazyColumn(
+      modifier = Modifier.fillMaxSize(),
+      verticalArrangement = Arrangement.Center,
+      horizontalAlignment = Alignment.CenterHorizontally
 
-//    Column(modifier = Modifier.fillMaxSize(),
-//        verticalArrangement = Arrangement.Center
-//        horizontalAlignment = Alignment.CenterHorizontally
-//        ){
-//        Button(onClick = {}) {
-//            Text("Click Me")
-//        }
-//    }
+   ) {
+      items(count = 100){ index->  // index-> explicit, it-> implicit
+          Text("Index ${index+1}", modifier = Modifier.padding(18.dp))
+      }
+   }
+
 
 }
 //@Composable

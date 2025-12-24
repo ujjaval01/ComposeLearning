@@ -26,11 +26,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetPackComposeLearningTheme {
                 Column {
-//                    CounterScreen()
+                    CounterScreen()
 //                    ColumnExample()
 //                    LazyColumnExample()
 //                    ToastExample()
-                    RowAndCol()
+//                    RowAndCol()
                 }
 
             }
