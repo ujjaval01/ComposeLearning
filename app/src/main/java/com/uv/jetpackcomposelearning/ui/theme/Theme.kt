@@ -1,6 +1,7 @@
 package com.uv.jetpackcomposelearning.ui.theme
 
 import android.app.Activity
+import android.graphics.Color
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -10,6 +11,23 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.colorResource
+import com.uv.jetpackcomposelearning.R
+
+@Composable
+fun JetPackComposeLearningTheme(
+    content: @Composable () -> Unit
+) {
+    MaterialTheme(
+        colorScheme = lightColorScheme(
+            primary = colorResource(R.color.lightYellow),
+            background = colorResource(R.color.white),
+            onPrimary = colorResource(R.color.white)
+        ),
+        typography = Typography,
+        content = content
+    )
+}
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,

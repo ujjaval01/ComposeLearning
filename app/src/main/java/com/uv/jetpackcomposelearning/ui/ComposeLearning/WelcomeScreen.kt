@@ -93,7 +93,9 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                 lineHeight = 24.sp
             )
 
-            Spacer(modifier = modifier.height(22.dp))
+            Spacer(modifier = modifier.height(16.dp))
+
+
 
             Button(onClick = {},
                 modifier = modifier
