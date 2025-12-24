@@ -9,11 +9,16 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.ColumnExample
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.CounterScreen
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.Greet
+import com.uv.jetpackcomposelearning.ui.ComposeLearning.HomeScreen
 //import com.uv.jetpackcomposelearning.ui.ComposeLearning.ToastExample
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.LazyColumnExample
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.RowAndCol
@@ -27,15 +32,25 @@ class MainActivity : ComponentActivity() {
 //        enableEdgeToEdge()
         setContent {
             JetPackComposeLearningTheme {
-                Column {
-//                    CounterScreen()
-//                    ColumnExample()
-//                    LazyColumnExample()
-//                    ToastExample()
-//                    RowAndCol()
-//                    SplashScreen()
-                    WelcomeScreen()
+                var showSplash by remember { mutableStateOf(true) }
+
+                if (showSplash) {
+                    SplashScreen {
+                        showSplash = false
+                    }
+                } else {
+                    WelcomeScreen() // ya HomeScreen()
                 }
+//                Column {
+////                    CounterScreen()
+////                    ColumnExample()
+////                    LazyColumnExample()
+////                    ToastExample()
+////                    RowAndCol()
+////                    SplashScreen()
+////                    WelcomeScreen()
+//                    HomeScreen()
+//                }
 
             }
         }
