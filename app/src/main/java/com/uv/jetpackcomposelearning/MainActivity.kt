@@ -17,6 +17,8 @@ import com.uv.jetpackcomposelearning.ui.ComposeLearning.Greet
 //import com.uv.jetpackcomposelearning.ui.ComposeLearning.ToastExample
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.LazyColumnExample
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.RowAndCol
+import com.uv.jetpackcomposelearning.ui.ComposeLearning.SplashScreen
+import com.uv.jetpackcomposelearning.ui.ComposeLearning.WelcomeScreen
 import com.uv.jetpackcomposelearning.ui.theme.JetPackComposeLearningTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,11 +28,13 @@ class MainActivity : ComponentActivity() {
         setContent {
             JetPackComposeLearningTheme {
                 Column {
-                    CounterScreen()
+//                    CounterScreen()
 //                    ColumnExample()
 //                    LazyColumnExample()
 //                    ToastExample()
 //                    RowAndCol()
+//                    SplashScreen()
+                    WelcomeScreen()
                 }
 
             }
