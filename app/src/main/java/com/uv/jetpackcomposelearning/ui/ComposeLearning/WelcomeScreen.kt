@@ -106,7 +106,7 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                         R.color.lightYellow)
                 ), shape = RoundedCornerShape(16.dp)
             ) {
-                Text("Let's Continue..",
+                Text("Let's Continue...",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     color = androidx.compose.ui.graphics.Color.White
