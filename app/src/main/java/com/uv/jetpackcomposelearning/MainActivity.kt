@@ -21,7 +21,9 @@ import com.uv.jetpackcomposelearning.ui.ComposeLearning.Greet
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.HomeScreen
 //import com.uv.jetpackcomposelearning.ui.ComposeLearning.ToastExample
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.LazyColumnExample
+import com.uv.jetpackcomposelearning.ui.ComposeLearning.LoginScreen
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.RowAndCol
+import com.uv.jetpackcomposelearning.ui.ComposeLearning.SignupScreen
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.SplashScreen
 import com.uv.jetpackcomposelearning.ui.ComposeLearning.WelcomeScreen
 import com.uv.jetpackcomposelearning.ui.theme.JetPackComposeLearningTheme
@@ -31,16 +33,18 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 //        enableEdgeToEdge()
         setContent {
-            JetPackComposeLearningTheme {
-                var showSplash by remember { mutableStateOf(true) }
-
-                if (showSplash) {
-                    SplashScreen {
-                        showSplash = false
-                    }
-                } else {
-                    WelcomeScreen() // ya HomeScreen()
-                }
+//            LoginScreen()
+            SignupScreen()
+//            JetPackComposeLearningTheme {
+//                var showSplash by remember { mutableStateOf(true) }
+//
+//                if (showSplash) {
+//                    SplashScreen {
+//                        showSplash = false
+//                    }
+//                } else {
+//                    WelcomeScreen() // ya HomeScreen()
+//                }
 //                Column {
 ////                    CounterScreen()
 ////                    ColumnExample()
@@ -55,4 +59,4 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
-}
+//}
