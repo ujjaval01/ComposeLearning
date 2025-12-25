@@ -56,7 +56,7 @@ fun ColumnExample(modifier: Modifier = Modifier) {
         Text("Ujjaval Saini",
             color = Color.Black,
             modifier = Modifier.
-            align(Alignment.Center))
+            align(Alignment.BottomCenter))
     }
 
 }

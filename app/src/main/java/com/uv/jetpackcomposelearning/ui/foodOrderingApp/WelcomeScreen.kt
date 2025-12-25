@@ -1,9 +1,7 @@
-package com.uv.jetpackcomposelearning.ui.ComposeLearning
+package com.uv.jetpackcomposelearning.ui.foodOrderingApp
 
-import android.graphics.Color
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.content.MediaType.Companion.Text
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -21,6 +20,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -55,8 +55,8 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                 modifier = modifier
                     .size(280.dp)
                     .background(
-                        color = androidx.compose.ui.graphics.Color.White.copy(alpha = 0.1f),
-                        shape = androidx.compose.foundation.shape.CircleShape
+                        color = Color.White.copy(alpha = 0.1f),
+                        shape = CircleShape
                     ),
                 contentAlignment = Alignment.Center
             ){
@@ -109,7 +109,7 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                 Text("Let's Continue...",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
-                    color = androidx.compose.ui.graphics.Color.White
+                    color = Color.White
                 )
             }
         }
