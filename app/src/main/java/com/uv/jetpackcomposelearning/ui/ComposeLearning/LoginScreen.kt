@@ -29,15 +29,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.uv.jetpackcomposelearning.R
 import androidx.compose.ui.graphics.Color
+import androidx.navigation.NavController
 
 
 @Composable
-fun LoginScreen(modifier: Modifier = Modifier) {
+fun LoginScreen(
+
+    navController: NavController
+) {
     var email by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
 
     Column (
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .padding(top = 32.dp),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -45,14 +49,14 @@ fun LoginScreen(modifier: Modifier = Modifier) {
         Image(painter = painterResource(
             R.drawable.login_screen_img),
             contentDescription = "signup image",
-            modifier = modifier.height(264.dp)
+            modifier = Modifier.height(264.dp)
         )
 
         MyText(name = "Welcome back")
-        Spacer(modifier = modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(8.dp))
         Text("Login your account",
             fontSize = 18.sp,
-            modifier = modifier.padding(bottom = 16.dp)
+            modifier = Modifier.padding(bottom = 16.dp)
         )
 
         OutlinedTextField(
@@ -70,8 +74,8 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             label = { Text("Enter Your Password") }
         )
 
-        Spacer(modifier = modifier.height(8.dp))
-        Button(modifier = modifier.
+        Spacer(modifier = Modifier.height(8.dp))
+        Button(modifier = Modifier.
         padding(top = 8.dp)
             .width(200.dp), onClick = {}) {
             Text("Login Account",
@@ -88,13 +92,13 @@ fun LoginScreen(modifier: Modifier = Modifier) {
         }
 
         Text("-  -  -  -  - Or login with -  -  -  -  -",
-            modifier = modifier.padding(top = 22.dp))
+            modifier = Modifier.padding(top = 22.dp))
         Row(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(painter = painterResource(R.drawable.google_icon),
                 contentDescription = "google",
-                modifier = modifier
+                modifier = Modifier
                     .size(60.dp)
                     .padding(10.dp)
                     .clickable {
@@ -103,7 +107,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             )
             Image(painter = painterResource(R.drawable.facebook_icon),
                 contentDescription = "facebook",
-                modifier = modifier
+                modifier = Modifier
                     .size(80.dp)
                     .padding(10.dp)
                     .clickable {
@@ -112,7 +116,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             )
             Image(painter = painterResource(R.drawable.play_store),
                 contentDescription = "playStore",
-                modifier = modifier
+                modifier = Modifier
                     .size(60.dp)
                     .padding(10.dp)
                     .clickable {
@@ -124,8 +128,10 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text("Don't have an account?",
-                modifier = modifier.padding(top = 2.dp))
-            TextButton(onClick = {}) {
+                modifier = Modifier.padding(top = 2.dp))
+            TextButton(onClick = {
+                navController.navigate("signup_screen")
+            }) {
                 Text(
                     text = "Sign Up",
                     fontWeight = FontWeight.Bold
@@ -138,8 +144,8 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 
 
 
-@Preview(showBackground = true)
-@Composable
-fun LoginScreenPreview() {
-    LoginScreen()
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun LoginScreenPreview() {
+//    LoginScreen()
+//}

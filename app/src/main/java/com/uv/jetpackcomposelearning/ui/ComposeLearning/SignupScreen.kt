@@ -26,10 +26,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.uv.jetpackcomposelearning.R
 
 @Composable
-fun SignupScreen(modifier: Modifier = Modifier) {
+fun SignupScreen(
+    navController: NavController,
+    modifier: Modifier = Modifier
+) {
     var name by rememberSaveable { mutableStateOf("") }
     var email by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
@@ -93,7 +97,9 @@ fun SignupScreen(modifier: Modifier = Modifier) {
         ) {
             Text("Already have an account?",
                 modifier = modifier.padding(top = 2.dp))
-            TextButton(onClick = {}) {
+            TextButton(onClick = {
+                navController.navigate("login_screen")
+            }) {
                 Text(
                     text = "Login",
                     fontWeight = FontWeight.Bold
@@ -124,8 +130,8 @@ fun NameTextField(modifier: Modifier = Modifier, name: String, onNameChange: (St
 }
 
 
-@Preview(showBackground = true)
-@Composable
-fun SignupScreenPreview() {
-    SignupScreen()
-}
+//@Preview(showBackground = true)
+//@Composable
+//fun SignupScreenPreview() {
+//    SignupScreen()
+//}

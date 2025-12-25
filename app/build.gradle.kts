@@ -65,6 +65,9 @@ dependencies {
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
     // Lottie animation
     implementation("com.airbnb.android:lottie-compose:6.4.0")
+// for navigation component(one file to second file..)
+    implementation("androidx.navigation:navigation-compose:2.8.0")
+
 
 
 }
