@@ -33,8 +33,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 //        enableEdgeToEdge()
         setContent {
-//            LoginScreen()
-            SignupScreen()
+            LoginScreen()
+//            SignupScreen()
 //            JetPackComposeLearningTheme {
 //                var showSplash by remember { mutableStateOf(true) }
 //
