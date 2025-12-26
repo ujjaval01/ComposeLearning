@@ -35,6 +35,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.uv.jetpackcomposelearning.models.AppItem
 
 @Composable
@@ -44,12 +45,14 @@ fun AppHubScreen(
     val apps = listOf(
         AppItem("Food App", R.drawable.food_1, "food_app"),
         AppItem("Weather", R.drawable.weather, "weather_app"),
-        AppItem("To-Do", R.drawable.todo_list, "todo_app"),
-        AppItem("PDF Reader", R.drawable.apni_dukaan_icon, "apni_dukaan"),
+        AppItem("To-Do List", R.drawable.todo_list, "todo_app"),
+        AppItem("Login & Signup", R.drawable.apni_dukaan_icon, "login_signup"),
         AppItem("Photo Editor", R.drawable.photo_editor, "photo_app")
     )
 
     Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center,
         modifier = Modifier
             .fillMaxSize()
             .padding(20.dp)
@@ -143,8 +146,9 @@ fun PremiumAppCard(
     }
 }
 
-@Composable
 @Preview(showSystemUi = true, showBackground = true)
-fun AppHubPrev(modifier: Modifier = Modifier) {
-    AppHubPrev()
+@Composable
+fun AppHubPreview() {
+    val navController = rememberNavController()
+    AppHubScreen(navController = navController)
 }

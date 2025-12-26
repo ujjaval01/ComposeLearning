@@ -67,6 +67,10 @@ dependencies {
     implementation("com.airbnb.android:lottie-compose:6.4.0")
 // for navigation component(one file to second file..)
     implementation("androidx.navigation:navigation-compose:2.8.0")
+// retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+
 
 
 

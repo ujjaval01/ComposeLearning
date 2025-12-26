@@ -8,14 +8,16 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.uv.jetpackcomposelearning.ui.counterApp.CounterScreen
-import com.uv.jetpackcomposelearning.ui.foodOrderingApp.HomeScreen
+import com.uv.jetpackcomposelearning.ui.foodOrderingApp.FoodAppNav
 import com.uv.jetpackcomposelearning.ui.loginAndSignup.SignupScreen
 import com.uv.jetpackcomposelearning.ui.theme.JetPackComposeLearningTheme
+import com.uv.jetpackcomposelearning.ui.weatherApp.WeatherPage
+import com.uv.jetpackcomposelearning.ui.weatherApp.WeatherViewModel
+import androidx.lifecycle.viewmodel.compose.viewModel
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContent {
             JetPackComposeLearningTheme {
                 AppNavigation()
@@ -26,7 +28,6 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun AppNavigation() {
-
     val navController = rememberNavController()
     NavHost(
         navController = navController,
@@ -37,11 +38,12 @@ fun AppNavigation() {
         }
 
         composable("food_app") {
-            HomeScreen()
+            FoodAppNav()
         }
 
         composable("weather_app") {
-            CounterScreen()
+            val weatherViewModel: WeatherViewModel = viewModel()
+            WeatherPage(weatherViewModel)
         }
 
         composable("todo_app") {

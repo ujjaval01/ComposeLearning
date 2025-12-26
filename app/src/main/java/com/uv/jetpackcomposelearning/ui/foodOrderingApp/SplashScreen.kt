@@ -20,10 +20,11 @@ import com.uv.jetpackcomposelearning.R
 import kotlinx.coroutines.delay
 
 @Composable
-fun SplashScreen(
-    onAnimationFinished: () -> Unit
+fun FoodSplashScreen(
+    onFinished: () -> Unit
 ) {
 
+    // 🔹 Lottie composition (UI scope)
     val composition by rememberLottieComposition(
         LottieCompositionSpec.RawRes(R.raw.food_carousel)
     )
@@ -34,12 +35,13 @@ fun SplashScreen(
         speed = 1f
     )
 
-    // ✅ 5 second delay + safe navigation
+    // 🔹 Splash delay + navigation (SIDE EFFECT)
     LaunchedEffect(Unit) {
-        delay(5000)
-        onAnimationFinished()
+        delay(3000)   // 3 sec splash
+        onFinished()
     }
 
+    // 🔹 UI
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -53,11 +55,11 @@ fun SplashScreen(
         )
     }
 }
+
 @Preview(showSystemUi = true, showBackground = true)
 @Composable
-fun SplashPreview() {
-    SplashScreen(
-        onAnimationFinished = {}
+fun FoodSplashPreview() {
+    FoodSplashScreen(
+        onFinished = {}
     )
 }
-

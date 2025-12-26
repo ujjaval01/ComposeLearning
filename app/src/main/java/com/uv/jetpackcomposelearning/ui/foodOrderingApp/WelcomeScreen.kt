@@ -31,12 +31,17 @@ import androidx.compose.ui.unit.sp
 import com.uv.jetpackcomposelearning.R
 
 @Composable
-fun WelcomeScreen(modifier: Modifier = Modifier) {
+fun WelcomeScreen(
+    onContinue: () -> Unit,
+    modifier: Modifier = Modifier
+) {
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(color = colorResource(R.color.white))
+            .background(colorResource(R.color.white))
     ) {
+
+        // 🔹 TOP SECTION (Gradient + Image)
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -50,22 +55,25 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                     )
                 ),
             contentAlignment = Alignment.Center
-        ){
+        ) {
             Box(
-                modifier = modifier
+                modifier = Modifier
                     .size(280.dp)
                     .background(
                         color = Color.White.copy(alpha = 0.1f),
                         shape = CircleShape
                     ),
                 contentAlignment = Alignment.Center
-            ){
-                Image(painter = painterResource(R.drawable.fruit_basket_image),
-                    contentDescription = null,
-                    modifier = modifier.size(160.dp)
+            ) {
+                Image(
+                    painter = painterResource(R.drawable.fruit_basket_image),
+                    contentDescription = "Fruit Basket",
+                    modifier = Modifier.size(160.dp)
                 )
             }
         }
+
+        // 🔹 BOTTOM CONTENT
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -73,40 +81,42 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
                 .padding(horizontal = 24.dp, vertical = 32.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
-
         ) {
-            Text("Get The Freshest Fruit Salad Combo",
+
+            Text(
+                text = "Get The Freshest Fruit Salad Combo",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Bold,
                 color = colorResource(R.color.black),
                 textAlign = TextAlign.Center,
                 lineHeight = 28.sp
-//                maxLines = 1
             )
 
-            Spacer(modifier = modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(16.dp))
 
-            Text("We deliver the best and freshest food salad in the market, Order now and get 20% off if you buy any of combo!!!",
+            Text(
+                text = "We deliver the best and freshest food salad in the market. Order now and get 20% off if you buy any combo!",
                 fontSize = 16.sp,
                 color = colorResource(R.color.black),
                 textAlign = TextAlign.Center,
                 lineHeight = 24.sp
             )
 
-            Spacer(modifier = modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(20.dp))
 
-
-
-            Button(onClick = {},
-                modifier = modifier
+            // 🔥 CONTINUE BUTTON
+            Button(
+                onClick = onContinue,
+                modifier = Modifier
                     .fillMaxWidth()
                     .height(56.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(
-                        R.color.lightYellow)
-                ), shape = RoundedCornerShape(16.dp)
+                    containerColor = colorResource(R.color.lightYellow)
+                ),
+                shape = RoundedCornerShape(16.dp)
             ) {
-                Text("Let's Continue...",
+                Text(
+                    text = "Let's Continue",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Medium,
                     color = Color.White
@@ -114,12 +124,12 @@ fun WelcomeScreen(modifier: Modifier = Modifier) {
             }
         }
     }
-
 }
 
-@Composable
 @Preview(showSystemUi = true, showBackground = true)
-fun WSPrev(modifier: Modifier = Modifier) {
-    WelcomeScreen()
-
+@Composable
+fun WSPrev() {
+    WelcomeScreen(
+        onContinue = {}
+    )
 }
