@@ -60,7 +60,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-
+    implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.material3:material3")
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
     // Lottie animation
@@ -73,7 +73,7 @@ dependencies {
     // for viewmodel
     implementation("androidx.compose.runtime:runtime-livedata:1.6.0")
 // for image loading
-    implementation("io.coil-kt.coil3:coil-compose:3.3.0")
+    implementation("io.coil-kt:coil-compose:2.6.0")
 
 
 
