@@ -74,6 +74,9 @@ dependencies {
     implementation("androidx.compose.runtime:runtime-livedata:1.6.0")
 // for image loading
     implementation("io.coil-kt:coil-compose:2.6.0")
+// for calculator(math library)
+    implementation("org.mozilla:rhino:1.7R4")
+
 
 
 
