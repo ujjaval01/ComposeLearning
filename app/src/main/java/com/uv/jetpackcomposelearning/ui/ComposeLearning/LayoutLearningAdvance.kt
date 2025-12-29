@@ -32,7 +32,8 @@ fun LazyColumnExample(modifier: Modifier = Modifier) {
 
    ) {
       items(count = 100){ index->  // index-> explicit, it-> implicit
-          Text("Index ${index+1}", modifier = Modifier.padding(18.dp))
+         Text("Index ${index+1}",
+             modifier = Modifier.padding(18.dp))
       }
    }
 
