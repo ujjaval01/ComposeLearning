@@ -21,6 +21,7 @@ import com.uv.jetpackcomposelearning.ui.weatherApp.WeatherViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.uv.jetpackcomposelearning.ui.calculator.Calculator
 import com.uv.jetpackcomposelearning.ui.calculator.CalculatorViewModel
+import com.uv.jetpackcomposelearning.ui.kotlinLearning.rowsAndCols.ListExample
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,11 +31,12 @@ class MainActivity : ComponentActivity() {
             val weatherViewModel: WeatherViewModel = viewModel()
             val calculatorViewModel: CalculatorViewModel = viewModel()   //second method...
             JetPackComposeLearningTheme {
+                ListExample()
 //                WeatherPage(weatherViewModel)
 //                AppNavigation()
-                Scaffold (modifier = Modifier.fillMaxSize()){innerPadding ->
-                    Calculator(modifier = Modifier.padding(innerPadding),calculatorViewModel)
-                }
+//                Scaffold (modifier = Modifier.fillMaxSize()){innerPadding ->
+//                    Calculator(modifier = Modifier.padding(innerPadding),calculatorViewModel)
+//                }
             }
         }
     }
