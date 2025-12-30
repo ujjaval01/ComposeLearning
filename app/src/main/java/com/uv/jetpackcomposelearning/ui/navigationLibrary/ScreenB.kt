@@ -18,24 +18,22 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ScreenA(
-    onNextButtonClicked : () -> Unit = {}
-) {
+fun ScreenB(onNextButtonClicked : () -> Unit) {
     Column (
         modifier = Modifier.fillMaxSize()
-            .background(color = Color.Gray),
+            .background(color = Color.Magenta),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
-        Text("Screen A",
+        Text("Screen B",
             fontSize = 25.sp,
-           )
+        )
         Spacer(modifier = Modifier.height(10.dp))
         Button(modifier = Modifier.wrapContentSize(),onClick = {
             onNextButtonClicked.invoke()
         }) {
-            Text("Go to Screen B",
-                fontSize = 20.sp)
+            Text("Go to Screen C",
+                fontSize = 22.sp)
         }
     }
 }
@@ -43,5 +41,5 @@ fun ScreenA(
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 private fun ScreeAPrev() {
-    ScreenA({})
+    ScreenB({})
 }

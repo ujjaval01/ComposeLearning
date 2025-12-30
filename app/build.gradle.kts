@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.uv.jetpackcomposelearning"
-        minSdk = 31
+        minSdk = 35
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -77,8 +77,10 @@ dependencies {
 // for calculator(math library)
     implementation("org.mozilla:rhino:1.7R4")
 
-
-
+    // for navigation 3
+    var navVersion = "1.1.0-alpha01"
+    implementation("androidx.navigation3:navigation3-runtime:$navVersion")
+    implementation("androidx.navigation3:navigation3-ui:$navVersion")
 
 
 }

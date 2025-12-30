@@ -20,22 +20,23 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun LazyColumnExample(modifier: Modifier = Modifier) {
-   LazyRow {
-      items(count = 100){ index->  // index-> explicit, it-> implicit
-         Text("Index ${index+1}", modifier = Modifier.padding(18.dp))
-      }
-   }
-   LazyColumn(
-      modifier = Modifier.fillMaxSize(),
-      verticalArrangement = Arrangement.Center,
-      horizontalAlignment = Alignment.CenterHorizontally
+    LazyRow {
+        items(count = 100) { index ->  // index-> explicit, it-> implicit
+            Text("Index ${index + 1}", modifier = Modifier.padding(18.dp))
+        }
+    }
+    LazyColumn(
+        modifier = Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
 
-   ) {
-      items(count = 100){ index->  // index-> explicit, it-> implicit
-         Text("Index ${index+1}",
-             modifier = Modifier.padding(18.dp))
-      }
-   }
+    ) {
+        items(count = 100) { index ->  // index-> explicit, it-> implicit
+            Text(
+                "Index ${index + 1}", modifier = Modifier.padding(18.dp)
+            )
+        }
+    }
 
 
 }
@@ -55,11 +56,10 @@ fun LazyColumnExample(modifier: Modifier = Modifier) {
 //}
 
 
-
 @Composable
 @Preview(showSystemUi = true, showBackground = true)
 fun Prev(modifier: Modifier = Modifier) {
-   LazyColumnExample()
+    LazyColumnExample()
 //    ToastExample
 //    ()
 }
