@@ -1,4 +1,4 @@
-package com.uv.jetpackcomposelearning.ui.loginAndSignup
+package com.uv.jetpackcomposelearning.ui.loginAndSignup.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -27,13 +27,17 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.uv.jetpackcomposelearning.R
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import com.uv.jetpackcomposelearning.ui.loginAndSignup.auth.authviewmodel.AuthViewModel
 
 
 @Composable
 fun LoginScreen(
-
-    navController: NavController
+    navController: NavController,
+    viewModel: AuthViewModel
 ) {
     var email by rememberSaveable { mutableStateOf("") }
     var password by rememberSaveable { mutableStateOf("") }
@@ -140,10 +144,11 @@ fun LoginScreen(
     }
 }
 
-
-
-//@Preview(showBackground = true)
-//@Composable
-//fun LoginScreenPreview() {
-//    LoginScreen()
-//}
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun LoginScreenPreview() {
+    LoginScreen(
+        navController = rememberNavController(),
+        viewModel = viewModel()
+    )
+}

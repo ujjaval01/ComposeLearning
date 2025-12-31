@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "262436665940",
+    "project_id": "jetpackcomposelearning-d0acd",
+    "storage_bucket": "jetpackcomposelearning-d0acd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262436665940:android:323af76bc922806a5ecbc1",
+        "android_client_info": {
+          "package_name": "com.uv.jetpackcomposelearning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkmpD7JbuNc362xENz6e-tzkGTG7YW-d0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

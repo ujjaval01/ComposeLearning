@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.uv.jetpackcomposelearning" />
+                  <option name="mobileSdkAppId" value="1:262436665940:android:323af76bc922806a5ecbc1" />
+                  <option name="projectId" value="jetpackcomposelearning-d0acd" />
+                  <option name="projectNumber" value="262436665940" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

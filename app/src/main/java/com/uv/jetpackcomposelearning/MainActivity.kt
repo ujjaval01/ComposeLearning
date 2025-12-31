@@ -13,13 +13,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.uv.jetpackcomposelearning.ui.foodOrderingApp.FoodAppNav
-import com.uv.jetpackcomposelearning.ui.loginAndSignup.SignupScreen
+import com.uv.jetpackcomposelearning.ui.loginAndSignup.screens.SignupScreen
 import com.uv.jetpackcomposelearning.ui.theme.JetPackComposeLearningTheme
 import com.uv.jetpackcomposelearning.ui.weatherApp.WeatherPage
 import com.uv.jetpackcomposelearning.ui.weatherApp.WeatherViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation3.runtime.NavEntry
-import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
 import com.uv.jetpackcomposelearning.ui.calculator.CalculatorViewModel
 import com.uv.jetpackcomposelearning.ui.navigationLibrary.ScreenA
