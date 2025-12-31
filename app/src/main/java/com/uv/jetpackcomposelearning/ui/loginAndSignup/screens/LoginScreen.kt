@@ -144,4 +144,11 @@ fun LoginScreen(
     }
 }
 
-
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun LoginScreenPreview() {
+    LoginScreen(
+        navController = rememberNavController(),
+        viewModel = viewModel()
+    )
+}
