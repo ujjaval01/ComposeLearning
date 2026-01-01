@@ -45,8 +45,8 @@ fun AppHubScreen(
     val apps = listOf(
         AppItem("Food App", R.drawable.food_1, "food_app"),
         AppItem("Weather", R.drawable.weather, "weather_app"),
-        AppItem("To-Do List", R.drawable.todo_list, "todo_app"),
         AppItem("Login & Signup", R.drawable.apni_dukaan_icon, "login_signup"),
+        AppItem("To-Do List", R.drawable.todo_list, "todo_app"),
         AppItem("Photo Editor", R.drawable.photo_editor, "photo_app")
     )
 
