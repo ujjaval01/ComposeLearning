@@ -60,17 +60,13 @@ fun AppHubScreen(
 
         // 🔹 HEADER
         Text(
-            text = "Jetpack Compose Hub",
-            fontSize = 26.sp,
-            fontWeight = FontWeight.Bold
+            text = "Jetpack Compose Hub", fontSize = 26.sp, fontWeight = FontWeight.Bold
         )
 
         Spacer(modifier = Modifier.height(4.dp))
 
         Text(
-            text = "Explore mini apps built with Compose",
-            fontSize = 14.sp,
-            color = Color.Gray
+            text = "Explore mini apps built with Compose", fontSize = 14.sp, color = Color.Gray
         )
 
         Spacer(modifier = Modifier.height(24.dp))
@@ -93,14 +89,12 @@ fun AppHubScreen(
 
 @Composable
 fun PremiumAppCard(
-    app: AppItem,
-    onClick: () -> Unit
+    app: AppItem, onClick: () -> Unit
 ) {
     var pressed by remember { mutableStateOf(false) }
 
     val scale by animateFloatAsState(
-        targetValue = if (pressed) 0.95f else 1f,
-        label = ""
+        targetValue = if (pressed) 0.95f else 1f, label = ""
     )
 
     Card(
@@ -119,13 +113,10 @@ fun PremiumAppCard(
                         tryAwaitRelease()
                         pressed = false
                         onClick()
-                    }
-                )
-            }
-    ) {
+                    })
+            }) {
         Column(
-            modifier = Modifier.padding(20.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+            modifier = Modifier.padding(20.dp), horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
             Image(
@@ -135,7 +126,6 @@ fun PremiumAppCard(
             )
 
             Spacer(modifier = Modifier.height(12.dp))
-
             Text(
                 text = app.title,
                 fontSize = 16.sp,
